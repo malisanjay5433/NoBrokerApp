@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F5E322EBED3FD918C28E67F /* Pods_Nobroker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2643D9905E83777C2FE454 /* Pods_Nobroker.framework */; };
 		9B73DBE91EB50C6400313F56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B73DBE81EB50C6400313F56 /* AppDelegate.swift */; };
 		9B73DBEB1EB50C6400313F56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B73DBEA1EB50C6400313F56 /* ViewController.swift */; };
 		9B73DBEE1EB50C6400313F56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B73DBEC1EB50C6400313F56 /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		9B73DBF31EB50C6400313F56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B73DBF11EB50C6400313F56 /* LaunchScreen.storyboard */; };
 		9B73DBFE1EB50C6400313F56 /* NobrokerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B73DBFD1EB50C6400313F56 /* NobrokerTests.swift */; };
 		9B73DC091EB50C6400313F56 /* NobrokerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B73DC081EB50C6400313F56 /* NobrokerUITests.swift */; };
+		9B73DC1C1EB515A500313F56 /* NobrokerPropertyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B73DC1A1EB515A500313F56 /* NobrokerPropertyListViewController.swift */; };
+		9B73DC1D1EB515A500313F56 /* PropertyListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B73DC1B1EB515A500313F56 /* PropertyListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D2643D9905E83777C2FE454 /* Pods_Nobroker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nobroker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B73DBE51EB50C6400313F56 /* Nobroker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nobroker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B73DBE81EB50C6400313F56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B73DBEA1EB50C6400313F56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		9B73DC041EB50C6400313F56 /* NobrokerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NobrokerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B73DC081EB50C6400313F56 /* NobrokerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobrokerUITests.swift; sourceTree = "<group>"; };
 		9B73DC0A1EB50C6400313F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B73DC1A1EB515A500313F56 /* NobrokerPropertyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NobrokerPropertyListViewController.swift; sourceTree = "<group>"; };
+		9B73DC1B1EB515A500313F56 /* PropertyListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyListCell.swift; sourceTree = "<group>"; };
+		C69643A3B8245280EB6DE483 /* Pods-Nobroker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nobroker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nobroker/Pods-Nobroker.release.xcconfig"; sourceTree = "<group>"; };
+		CD59EBF3D97EE3CEF6199C72 /* Pods-Nobroker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nobroker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nobroker/Pods-Nobroker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F5E322EBED3FD918C28E67F /* Pods_Nobroker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15B1F24FF3C955BDAB6B15D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D2643D9905E83777C2FE454 /* Pods_Nobroker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9B73DBDC1EB50C6400313F56 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +98,8 @@
 				9B73DBFC1EB50C6400313F56 /* NobrokerTests */,
 				9B73DC071EB50C6400313F56 /* NobrokerUITests */,
 				9B73DBE61EB50C6400313F56 /* Products */,
+				A7793BA01D688DE759CFFBED /* Pods */,
+				15B1F24FF3C955BDAB6B15D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +116,8 @@
 		9B73DBE71EB50C6400313F56 /* Nobroker */ = {
 			isa = PBXGroup;
 			children = (
+				9B73DC1A1EB515A500313F56 /* NobrokerPropertyListViewController.swift */,
+				9B73DC1B1EB515A500313F56 /* PropertyListCell.swift */,
 				9B73DBE81EB50C6400313F56 /* AppDelegate.swift */,
 				9B73DBEA1EB50C6400313F56 /* ViewController.swift */,
 				9B73DBEC1EB50C6400313F56 /* Main.storyboard */,
@@ -125,6 +146,15 @@
 			path = NobrokerUITests;
 			sourceTree = "<group>";
 		};
+		A7793BA01D688DE759CFFBED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD59EBF3D97EE3CEF6199C72 /* Pods-Nobroker.debug.xcconfig */,
+				C69643A3B8245280EB6DE483 /* Pods-Nobroker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B73DC0D1EB50C6400313F56 /* Build configuration list for PBXNativeTarget "Nobroker" */;
 			buildPhases = (
+				E80CA68E266354DCC8AD0F1D /* [CP] Check Pods Manifest.lock */,
 				9B73DBE11EB50C6400313F56 /* Sources */,
 				9B73DBE21EB50C6400313F56 /* Frameworks */,
 				9B73DBE31EB50C6400313F56 /* Resources */,
+				0F5038DFCB3EF77714839805 /* [CP] Embed Pods Frameworks */,
+				CF4F975D2D0070231DE72C55 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +226,7 @@
 				TargetAttributes = {
 					9B73DBE41EB50C6400313F56 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 3J7U28GXGW;
 						ProvisioningStyle = Automatic;
 					};
 					9B73DBF81EB50C6400313F56 = {
@@ -254,12 +288,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F5038DFCB3EF77714839805 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nobroker/Pods-Nobroker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF4F975D2D0070231DE72C55 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nobroker/Pods-Nobroker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E80CA68E266354DCC8AD0F1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9B73DBE11EB50C6400313F56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9B73DBEB1EB50C6400313F56 /* ViewController.swift in Sources */,
+				9B73DC1C1EB515A500313F56 /* NobrokerPropertyListViewController.swift in Sources */,
+				9B73DC1D1EB515A500313F56 /* PropertyListCell.swift in Sources */,
 				9B73DBE91EB50C6400313F56 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,8 +494,10 @@
 		};
 		9B73DC0E1EB50C6400313F56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD59EBF3D97EE3CEF6199C72 /* Pods-Nobroker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3J7U28GXGW;
 				INFOPLIST_FILE = Nobroker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = theiOSDeveloper.Nobroker;
@@ -422,8 +508,10 @@
 		};
 		9B73DC0F1EB50C6400313F56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C69643A3B8245280EB6DE483 /* Pods-Nobroker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3J7U28GXGW;
 				INFOPLIST_FILE = Nobroker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = theiOSDeveloper.Nobroker;
@@ -505,6 +593,7 @@
 				9B73DC0F1EB50C6400313F56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B73DC101EB50C6400313F56 /* Build configuration list for PBXNativeTarget "NobrokerTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +602,7 @@
 				9B73DC121EB50C6400313F56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B73DC131EB50C6400313F56 /* Build configuration list for PBXNativeTarget "NobrokerUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +611,7 @@
 				9B73DC151EB50C6400313F56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
