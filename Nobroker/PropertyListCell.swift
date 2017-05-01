@@ -7,13 +7,11 @@
 //
 
 import UIKit
-
 class PropertyListCell: UITableViewCell {
-
-    
     @IBOutlet weak var propertyTitle: UILabel!
     @IBOutlet weak var propertySecondTitle: UILabel!
     @IBOutlet weak var propertyRent: UILabel!
+    @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var propertyFurnishing: UILabel!
     @IBOutlet weak var propertyBuitupArea: UILabel!
     override func awakeFromNib() {

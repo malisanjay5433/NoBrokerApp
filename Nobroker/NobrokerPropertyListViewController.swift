@@ -10,11 +10,6 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import KRProgressHUD
-/*
- &type=BHK3/BHK4/BHK2
- &buildingType=AP/IH/IF
- &furnishing=FULLY_FURNISHED/SEMI_FURNISHED
- */
 class NobrokerPropertyListViewController: UITableViewController {
     var rootImageUrl = "http://d3snwcirvb4r88.cloudfront.net/images/"
     var model = [PropertyModel]()
@@ -23,18 +18,25 @@ class NobrokerPropertyListViewController: UITableViewController {
     var total_Count = 0
     var offset = 1
     var photoUrl = [String]()
+    var type = ""
+    var buildingType = ""
+    var furnishing = ""
+
+    @IBOutlet weak var segmentCotrol: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
         configure_Loading()
-        startActivity()
-        getProperties()
+        DispatchQueue.main.async {
+        self.getProperties()
+        }
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
     }
     // MARK: API Call
     func getProperties(){
-        let api = "http://www.nobroker.in/api/v1/property/filter/region/ChIJLfyY2E4UrjsRVq4AjI7zgRY/?lat_lng=12.9279232,77.6271078&rent=0,500000&travelTime=30&pageNo=\(self.offset)"
-        print("Api:\(api)")
+        startActivity()
+        let api = "http://www.nobroker.in/api/v1/property/filter/region/ChIJLfyY2E4UrjsRVq4AjI7zgRY/?lat_lng=12.9279232,77.6271078&rent=0,500000&travelTime=30&pageNo=\(self.offset)&type=\(self.type)&buildingType=\(self.buildingType)&furnishing=\(furnishing)"
+        print("api:\(api)")
         Alamofire.request(api, method:.get, parameters: nil)
             .responseJSON { response in
                 //print(response.result)   // result of response serialization
@@ -44,7 +46,6 @@ class NobrokerPropertyListViewController: UITableViewController {
                 }
                 if let json = response.data {
                     let json_Data = JSON(data:json)
-                    print("json:\(json_Data)")
                     
                     if json_Data["statusCode"] == 200{
                         self.total_Count = json_Data["otherParams"]["total_count"].int!
@@ -52,13 +53,8 @@ class NobrokerPropertyListViewController: UITableViewController {
                         for i in data{
                             for k in i["photos"]{
                                 let url = k.1["imagesMap","original"].string!
-//                                print("url:\(url)")
                                 self.photoUrl.append(url)
                             }
-//                            for (index,subJson):(String, JSON) in i {
-//                            print("index,subjson:\(index,subJson):")
-//                            }
-//                            
                             let m = PropertyModel(json:i)
                             self.model.append(m)
                             }
@@ -67,18 +63,53 @@ class NobrokerPropertyListViewController: UITableViewController {
                         print("Error Status code 500")
                     }
                 }
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                    self.reloadTable()
                     self.loadingMoreView?.stopAnimating()
                     self.offset = self.offset+1
                     self.stopActivity()
-                }
+            
         }
+        reloadTable()
+    }
+    
+    func reloadTable(){
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }
-  
+    @IBAction func filterProperty(_ sender: Any) {
+        switch (sender as AnyObject).selectedSegmentIndex {
+        case 0:
+            self.type = "BHK3/BHK4/BHK2"
+            self.buildingType = ""
+            self.furnishing = ""
+            removeExistingData()
+            getProperties()
+            break
+        case 1:
+            self.buildingType = "AP/IH/IF"
+            self.type = ""
+            self.furnishing = ""
+            removeExistingData()
+            getProperties()
+            break
+        case 2:
+            self.furnishing = "FULLY_FURNISHED/SEMI_FURNISHED"
+            self.buildingType = ""
+            self.furnishing = ""
+            removeExistingData()
+            getProperties()
+            break
+        default:
+            print("default")
+        }
+    }
+    func removeExistingData(){
+        self.offset  = 1
+        self.model.removeAll()
+        self.photoUrl.removeAll()
+    }
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -90,6 +121,8 @@ class NobrokerPropertyListViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PropertyListCell
+        cell.cellView.layer.cornerRadius = 3.0
+        cell.cellView.layer.masksToBounds = true
         let data = model[indexPath.row]
         cell.propertyTitle.text = data.propertyTitle
         cell.propertySecondTitle.text = data.secondaryTitle
@@ -119,53 +152,13 @@ class NobrokerPropertyListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
     }
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
 extension NobrokerPropertyListViewController {
+    
+    
+    
+    
     func startActivity(){
         KRProgressHUD.show()
         KRProgressHUD.set(activityIndicatorStyle: .color(UIColor.black,.black))
@@ -216,6 +209,9 @@ extension NobrokerPropertyListViewController {
         }
         return
     }
+    
+    
+    
 }
 //extension UIImageView {
 //    public func imageFromServerURL(urlString: String) {
