@@ -17,6 +17,8 @@
 		9B73DC091EB50C6400313F56 /* NobrokerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B73DC081EB50C6400313F56 /* NobrokerUITests.swift */; };
 		9B73DC1C1EB515A500313F56 /* NobrokerPropertyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B73DC1A1EB515A500313F56 /* NobrokerPropertyListViewController.swift */; };
 		9B73DC1D1EB515A500313F56 /* PropertyListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B73DC1B1EB515A500313F56 /* PropertyListCell.swift */; };
+		9BF952C21EB63C3D00470A95 /* PropertyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF952C11EB63C3D00470A95 /* PropertyModel.swift */; };
+		9BF952C41EB652B600470A95 /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF952C31EB652B600470A95 /* InfiniteScrollActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		9B73DC0A1EB50C6400313F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B73DC1A1EB515A500313F56 /* NobrokerPropertyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NobrokerPropertyListViewController.swift; sourceTree = "<group>"; };
 		9B73DC1B1EB515A500313F56 /* PropertyListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyListCell.swift; sourceTree = "<group>"; };
+		9BF952C11EB63C3D00470A95 /* PropertyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyModel.swift; sourceTree = "<group>"; };
+		9BF952C31EB652B600470A95 /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
 		C69643A3B8245280EB6DE483 /* Pods-Nobroker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nobroker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nobroker/Pods-Nobroker.release.xcconfig"; sourceTree = "<group>"; };
 		CD59EBF3D97EE3CEF6199C72 /* Pods-Nobroker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nobroker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nobroker/Pods-Nobroker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +128,8 @@
 				9B73DBEF1EB50C6400313F56 /* Assets.xcassets */,
 				9B73DBF11EB50C6400313F56 /* LaunchScreen.storyboard */,
 				9B73DBF41EB50C6400313F56 /* Info.plist */,
+				9BF952C11EB63C3D00470A95 /* PropertyModel.swift */,
+				9BF952C31EB652B600470A95 /* InfiniteScrollActivityView.swift */,
 			);
 			path = Nobroker;
 			sourceTree = "<group>";
@@ -345,6 +351,8 @@
 				9B73DC1C1EB515A500313F56 /* NobrokerPropertyListViewController.swift in Sources */,
 				9B73DC1D1EB515A500313F56 /* PropertyListCell.swift in Sources */,
 				9B73DBE91EB50C6400313F56 /* AppDelegate.swift in Sources */,
+				9BF952C41EB652B600470A95 /* InfiniteScrollActivityView.swift in Sources */,
+				9BF952C21EB63C3D00470A95 /* PropertyModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

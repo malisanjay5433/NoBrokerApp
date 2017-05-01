@@ -18,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="300" id="BEj-Gg-hpj" customClass="PropertyListCell" customModule="Nobroker" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="300" id="BEj-Gg-hpj" customClass="PropertyListCell" customModule="Nobroker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BEj-Gg-hpj" id="gXd-wp-MMu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMK-6A-Ohp">
@@ -74,8 +74,8 @@
                                                             <rect key="frame" x="245.5" y="0.0" width="121.5" height="55"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1800 Sq.ft  Built up area" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THU-ne-hB6">
-                                                                    <rect key="frame" x="8" y="10" width="105.5" height="33.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <rect key="frame" x="8" y="10" width="105.5" height="38.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -193,6 +193,14 @@
                                         <constraint firstAttribute="trailing" secondItem="MMK-6A-Ohp" secondAttribute="trailing" constant="4" id="yQU-E3-RVX"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="propertyBuitupArea" destination="THU-ne-hB6" id="Mj1-hK-kzh"/>
+                                    <outlet property="propertyFurnishing" destination="feP-Mu-zZg" id="7k1-Lb-sNC"/>
+                                    <outlet property="propertyImage" destination="KQJ-T6-qed" id="F9U-EB-dj9"/>
+                                    <outlet property="propertyRent" destination="agm-mb-YIZ" id="ZCD-Jj-MDF"/>
+                                    <outlet property="propertySecondTitle" destination="ogk-XS-iHh" id="X1e-Yr-Oh5"/>
+                                    <outlet property="propertyTitle" destination="Yrr-fV-uwV" id="FqE-A6-Cn1"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -211,7 +219,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GFe-1u-oIa" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="6HF-c7-wO6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="6HF-c7-wO6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.99079567193984985" green="0.28021863102912903" blue="0.38013988733291626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
